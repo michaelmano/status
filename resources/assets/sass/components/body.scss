@@ -1,0 +1,19 @@
+.Body {
+    font-size: 100%;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    color: color(alpha);
+    height: 100%;
+    position: relative;
+    background-color: color(bravo);
+}
+
+.is-locked.Body {
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+}
+
+[v-cloak] {
+    display: none;
+}

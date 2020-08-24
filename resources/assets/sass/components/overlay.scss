@@ -1,0 +1,234 @@
+.Overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    background-color: color(bravo);
+}
+
+.Overlay__backface {
+    opacity: 0;
+    height: 100%;
+}
+
+.Overlay__curtain {
+    background-color: color(golf);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    z-index: 999;
+    height: 100%;
+}
+
+@keyframes curtain {
+    0% {
+        right: 0;
+        left: auto;
+        width: 0%;
+    }
+
+    50% {
+        right: 0;
+        left: auto;
+        width: 100%;
+    }
+
+    51% {
+        right: auto;
+        left: 0;
+        width: 100%;
+    }
+
+    100% {
+        right: auto;
+        left: 0;
+        width: 0%;
+    }
+}
+
+@keyframes reveal {
+    0% { opacity: 0;}
+    50% { opacity: 0;}
+
+    51% {
+        transform: translate3d(20%, 0, 0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate3d(0%, 0, 0);
+        opacity: 1;
+    }
+}
+
+.is-active.Overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.is-active.Overlay .Overlay__backface {
+    animation-name: reveal;
+    animation-duration: 0.65s;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.is-active.Overlay .Overlay__curtain {
+    animation-name: curtain;
+    animation-duration: 0.65s;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.Overlay__scroller {
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    transform: translate3d(0%, 0, 0);
+    transition: all 0.15s ease-in-out;
+}
+
+.Overlay__panel {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-y: auto;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    -webkit-overflow-scrolling: touch;
+}
+
+.Overlay__panel:nth-of-type(1n) {
+    left: 0;
+}
+
+.Overlay__panel:nth-of-type(2n) {
+    left: 100%;
+}
+
+.Overlay__panel:nth-of-type(3n) {
+    left: 200%;
+}
+
+.Overlay__content-wrapper {
+    width: 100%;
+    margin: auto;
+    max-width: 70%;
+    padding: 3rem 0;
+}
+
+.Overlay__next,
+.Overlay__back {
+    top: 50%;
+    outline: 0;
+    width: 6rem;
+    height: 6rem;
+    position: fixed;
+    cursor: pointer;
+    margin-top: -3rem;
+    color: color(alpha);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: color(bravo);
+    border: 1px solid color(charlie);
+}
+
+.Overlay__btn-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > * + * {
+        margin-left: 0.35rem;
+    }
+}
+
+.Overlay__back {
+    left: -1px;
+    z-index: 1;
+}
+
+.Overlay__back .Overlay__btn-content > span:last-child {
+    display: none;
+}
+
+.Overlay__next {
+    right: -1px;
+    z-index: 3;
+}
+
+.Overlay__next--error {
+    text-transform: uppercase;
+    color: color(bravo);
+    font-weight: 600;
+    background-color: color(foxtrot);
+    position: absolute;
+    top: 50%;
+    right: 4.9rem;
+    z-index: 2;
+    height: 6rem;
+    margin-top: -3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    max-width: 20rem;
+    text-align: center;
+    transform: translate3d(20rem, 0, 0);
+    transition: all .3s ease-out;
+}
+
+.is-active.Overlay__next--error {
+    transform: translate3d(0rem, 0, 0);
+}
+
+.is-active.Overlay__back .Overlay__btn-content {
+    > span:nth-child(2n) {
+        display: none;
+    }
+
+    > span:last-child {
+        display: initial;
+    }
+}
+
+.Overlay__finish-screen {
+    display: none;
+    background-color: color(bravo);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    color: color(alpha);
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.is-finishing.Overlay .Overlay__finish-screen {
+    display: flex;
+}

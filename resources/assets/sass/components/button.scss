@@ -1,0 +1,60 @@
+.Button {
+    border: 0;
+    border-radius: 0;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    background-color: color(bravo);
+    border: 1px solid color(alpha);
+    padding: 1rem 1.25rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+    outline: 0;
+}
+
+.Button--warning {
+    background-color: color(foxtrot);
+    font-weight: bold;
+}
+
+.Button--sign-out {
+    font-size: 2.5rem;
+    padding: 2rem 2.5rem;
+    >*+* {
+        margin-left: 1rem;
+    }
+}
+
+.Button--small {
+    padding: 0.2rem 0.45rem;
+    font-size: 0.85rem;
+}
+
+.Button--medium {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.Button--remove {
+    position: relative;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    background-color: color(golf);
+    color: color(alpha);
+    border-radius: 50%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    &:before {
+        $size: 16px;
+        content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="#FFFFFF" d="M323.1 441l53.9-53.9c9.4-9.4 9.4-24.5 0-33.9L279.8 256l97.2-97.2c9.4-9.4 9.4-24.5 0-33.9L323.1 71c-9.4-9.4-24.5-9.4-33.9 0L192 168.2 94.8 71c-9.4-9.4-24.5-9.4-33.9 0L7 124.9c-9.4 9.4-9.4 24.5 0 33.9l97.2 97.2L7 353.2c-9.4 9.4-9.4 24.5 0 33.9L60.9 441c9.4 9.4 24.5 9.4 33.9 0l97.2-97.2 97.2 97.2c9.3 9.3 24.5 9.3 33.9 0z"></path></svg>');
+        position: absolute;
+        width: $size;
+        height: $size;
+        margin-top: -2px;
+    }
+}

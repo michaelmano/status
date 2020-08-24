@@ -1,0 +1,30 @@
+.Admin {
+}
+
+.Admin__header {
+    width: 100%;
+    max-width: 75rem;
+    position: relative;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.Admin__logo {
+}
+
+.Admin__logout {
+    font-size: 16px;
+}
+
+.Admin {
+    .FSPanel {
+        height: auto;
+        min-height: 100vh;
+        top: 10rem;
+    }
+}

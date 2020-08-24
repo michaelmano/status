@@ -1,0 +1,13 @@
+$g-colors: (
+    alpha: #ffffff,
+    bravo: #151515,
+    charlie: #333333,
+    delta: #1d1d1d,
+    echo: #A0D912,
+    foxtrot: #F4202C,
+    golf: #FBC018,
+);
+
+@function color($_label) {
+    @return map-get($g-colors, $_label);
+}

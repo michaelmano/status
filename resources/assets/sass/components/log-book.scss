@@ -1,0 +1,155 @@
+.LogBook {
+    box-shadow: 0 -16px 24px 0 rgba(0, 0, 0, 0.5);
+    padding: 4rem 3rem 6rem 3rem;
+    color: color(bravo);
+    position: relative;
+    background-color: color(delta);
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: -4rem;
+
+    &__full {
+        margin: 2rem 0;
+        max-width: 100%;
+    }
+}
+
+.LogBook__label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    display: flex;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    color: color(alpha);
+    position: absolute;
+    top: -4rem;
+    left: 50%;
+    width: 26rem;
+    height: 4rem;
+    margin-left: -13rem;
+
+    > * + * {
+        margin-left: 1rem;
+    }
+}
+
+.LogBook__title {
+    font-weight: 300;
+    color: color(alpha);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.LogBook__time {
+    color: color(alpha);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.LogBook__lines {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid color(charlie);
+}
+
+.LogBook__lines:not(.LogBook__lines--admin)::before {
+    content: "🤙  No one is currently signed out";
+    white-space: pre;
+    display: block;
+    font-weight: 300;
+    text-align: center;
+    top: 2.5rem;
+    font-size: 1.2rem;
+    color: color(alpha);
+    position: absolute;
+    width: 100%;
+}
+
+.LogBook__line {
+    overflow: hidden;
+    border-bottom: 1px solid color(charlie);
+    list-style-type: none;
+    position: relative;
+    transition: all .5s;
+    height: 67px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: gray;
+        transition: all .25s;
+        z-index: 1;
+    }
+}
+
+.LogBook__line--overdue {
+    & .LogBook__line-datetime {
+        color: color(foxtrot);
+    }
+}
+
+.is-active.LogBook__line::after {
+    background-color: green;
+}
+
+.LogBook__line-content {
+    color: color(alpha);
+    padding: 1.5rem 1rem;
+    display: flex;
+    transition: all .1s;
+    z-index: 2;
+    position: relative;
+    background-color: color(delta);
+
+    > * {
+        transition: all .1s;
+        flex-basis: calc(100%/4);
+        flex-grow: 1;
+        flex-shrink: 1;
+        width: calc(100%/4);
+        max-width: calc(100%/4);
+    }
+}
+
+.is-dragging.LogBook__line-content > * {
+    opacity: 0.5;
+}
+
+.LogBook__line-name {
+    text-transform: capitalize;
+}
+
+.LogBook__line-status {
+    //
+}
+
+.LogBook__line-datetime {
+    //
+}
+
+.LogBook__line-delete {
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: auto;
+    max-width: auto;
+    margin: 0;
+}
+
+.LogBook__controls {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}

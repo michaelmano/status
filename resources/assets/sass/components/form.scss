@@ -1,0 +1,140 @@
+.Form {
+    width: 100%;
+    border-bottom: 1px solid color(charlie);
+    margin-bottom: 1rem;
+    & input,
+    & select,
+    & select option,
+    & button,
+    &__input {
+        color: color(alpha);
+        outline: none;
+        position: relative;
+        margin: 0 1rem 1rem 0;
+        align-items: center;
+        flex: 0 0 auto;
+        &:nth-last-child() {
+            margin: 0 0 1rem 0;
+        }
+    }
+    & input,
+    & select,
+    &__input {
+        position: relative;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding: 0 10px;
+        background-color: color(bravo);
+        border: none;
+        border-radius: 0;
+        width: 100%;
+        line-height: 1.3;
+        white-space: pre;
+        font-size: 2.5rem;
+        min-height: 3.3rem;
+        letter-spacing: 0.05rem;
+        font-weight: normal;
+    }
+    &__title {
+        display: block;
+        width: 100%;
+        flex: none;
+        font-weight: 300;
+        color: color(alpha);
+        text-align: center;
+        font-size: 2rem;
+    }
+    & select {
+        background-image:
+            linear-gradient(135deg, color(charlie) 50%, transparent 50%),
+            linear-gradient(45deg, transparent 50%, color(charlie) 50%);
+        background-position:
+            calc(100% - 20px) calc(50% + 4px),
+            calc(100% - 30px) calc(50% + 4px),
+            calc(100% - .5em) .5em;
+        background-size:
+            10px 10px,
+            10px 10px,
+            24px 24px;
+        background-repeat: no-repeat;
+        outline: 0;
+    }
+}
+
+.Form--flex {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    & input,
+    & select,
+    &__input {
+        width: auto;
+        flex-grow: 1;
+    }
+    &__title {
+        display: block;
+        width: 100%;
+        flex: none;
+        font-weight: 300;
+        color: color(alpha);
+        text-align: center;
+        margin: 1rem 0;
+        font-size: 2rem;
+    }
+}
+
+.Form--list {
+    flex-wrap: nowrap;
+    border-bottom: none;
+    
+    & * {
+        display: flex !important;
+        margin: 0 0.5rem !important;
+        flex: 1 1 1 !important;
+    }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: none;
+    -webkit-text-fill-color: color(alpha);
+    -webkit-box-shadow: 0 0 0px 1000px color(bravo) inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+:disabled,
+:invalid,
+select:not(.has-value),
+select[value=""] {
+    color: lighten(color(bravo), 30%) !important;
+}
+
+::-webkit-input-placeholder {
+    opacity: 1 !important;
+    color: lighten(color(bravo), 30%);
+}
+
+::-moz-placeholder {
+    opacity: 1 !important;
+    color: lighten(color(bravo), 30%);
+}
+
+:-ms-input-placeholder {
+    opacity: 1 !important;
+    color: lighten(color(bravo), 30%);
+}
+
+:-moz-placeholder {
+    opacity: 1 !important;
+    color: lighten(color(bravo), 30%);
+}
