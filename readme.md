@@ -12,12 +12,12 @@ It also uses a namepad built in vue for general use without camera.
 
 ## Example screen shots
 
-!["Step 1"](docs/1.jpg?raw=true)
-!["Step 2"](docs/2.jpg?raw=true)
-!["Step 3"](docs/3.jpg?raw=true)
-!["Step 4"](docs/4.jpg?raw=true)
-!["Step 5"](docs/5.jpg?raw=true)
-!["Step 6"](docs/6.jpg?raw=true)
-!["Step 7"](docs/7.jpg?raw=true)
-!["Step 8"](docs/8.jpg?raw=true)
-!["Step 9"](docs/9.jpg?raw=true)
+!["Step 1"](https://raw.githubusercontent.com/michaelmano/status/master/docs/1.png)
+!["Step 2"](https://raw.githubusercontent.com/michaelmano/status/master/docs/2.png)
+!["Step 3"](https://raw.githubusercontent.com/michaelmano/status/master/docs/3.png)
+!["Step 4"](https://raw.githubusercontent.com/michaelmano/status/master/docs/4.png)
+!["Step 5"](https://raw.githubusercontent.com/michaelmano/status/master/docs/5.png)
+!["Step 6"](https://raw.githubusercontent.com/michaelmano/status/master/docs/6.png)
+!["Step 7"](https://raw.githubusercontent.com/michaelmano/status/master/docs/7.png)
+!["Step 8"](https://raw.githubusercontent.com/michaelmano/status/master/docs/8.png)
+!["Step 9"](https://raw.githubusercontent.com/michaelmano/status/master/docs/9.png)
