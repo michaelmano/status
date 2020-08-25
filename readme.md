@@ -12,8 +12,13 @@ It also uses a namepad built in vue for general use without camera.
 
 ## Example screen shots
 
+### With facial recognition
+
 !["Step 1"](https://raw.githubusercontent.com/michaelmano/status/master/docs/1.png)
 !["Step 2"](https://raw.githubusercontent.com/michaelmano/status/master/docs/2.png)
+
+### Manual keypad
+
 !["Step 3"](https://raw.githubusercontent.com/michaelmano/status/master/docs/3.png)
 !["Step 4"](https://raw.githubusercontent.com/michaelmano/status/master/docs/4.png)
 !["Step 5"](https://raw.githubusercontent.com/michaelmano/status/master/docs/5.png)
