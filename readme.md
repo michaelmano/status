@@ -22,6 +22,9 @@ It also uses a namepad built in vue for general use without camera.
 !["Step 3"](https://raw.githubusercontent.com/michaelmano/status/master/docs/3.png)
 !["Step 4"](https://raw.githubusercontent.com/michaelmano/status/master/docs/4.png)
 !["Step 5"](https://raw.githubusercontent.com/michaelmano/status/master/docs/5.png)
+
+### Rest of the flow
+
 !["Step 6"](https://raw.githubusercontent.com/michaelmano/status/master/docs/6.png)
 !["Step 7"](https://raw.githubusercontent.com/michaelmano/status/master/docs/7.png)
 !["Step 8"](https://raw.githubusercontent.com/michaelmano/status/master/docs/8.png)
